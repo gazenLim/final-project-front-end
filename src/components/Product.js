@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { removeItem } from '../action/AllProduct';
+import {  removeItem } from '../action/AllProduct';
 import { Link } from 'react-router-dom';
 import "../css/index.css"
 
@@ -7,12 +7,12 @@ import "../css/index.css"
 
 
 
-const Product = ({productItem, removeItem, selectProduct}) => {
-   
+const Product = ({productItem, removeItem}) => {
        return (
          <>
+         
         <div className="container" key={productItem.id}>
-        <Link to={`/products/${productItem.id}`} >
+        <Link to={`/product/${productItem.id}`} >
           <div className="img-container" key={productItem.id}>
             <img src= {productItem.image} alt="phone" className="rounded-pill" />
             </div>
@@ -28,6 +28,9 @@ const Product = ({productItem, removeItem, selectProduct}) => {
            <hr />
 
          </div>
+
+
+
 
          
     </>

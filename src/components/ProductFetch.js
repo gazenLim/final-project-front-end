@@ -1,28 +1,26 @@
 import { connect } from 'react-redux'
 import React, { Component } from 'react'
 import { AllProduct } from '../action/AllProduct'
-import Product from './Product'
+import Product from './Product';
+
 
 export class ProductFetch extends Component {
 
 
-  
 
-    
 
     componentDidMount(){
         this.props.AllProduct()
     }
 
       render() {
-        
-        console.log(this.props.product)
-        const products = this.props.product.map((productItem, i)=>
-         <Product key={i} productItem={productItem} /> 
-          )
+          console.log(this.props.products.length)
+          
+      const products = this.props.products.map((productItem)=><Product productItem={productItem} key={productItem.id} /> )
         return (
             <div>
-                {products}
+               {products}
+               
             </div>
         )
     }
@@ -30,8 +28,9 @@ export class ProductFetch extends Component {
 
 
 const mapStateToProps = state =>{
-    console.log(state)
-    return {product: state.products}
+       return {
+        products: state.products.products
+    }
 }
 
 

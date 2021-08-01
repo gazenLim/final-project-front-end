@@ -1,0 +1,15 @@
+
+
+export const ActionType ={
+    FETCH_PRODUCTS:"FETCH_PRODUCTS",
+    ADD_PRODUCT:"ADD_PRODUCT",
+    REMOVE_ITEM:"REMOVE_ITEM",
+    SELECT_ITEM:"SELECT_ITEM",
+    REMOVE_PRODUCT:"REMOVE_PRODUCT",
+
+
+
+
+
+  
+}
